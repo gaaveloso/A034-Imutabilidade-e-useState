@@ -23,19 +23,54 @@ function App() {
     image: 'https://archives.bulbagarden.net/media/upload/thumb/b/b9/172Pichu.png/250px-172Pichu.png',
     id: 0
   })
-
-  // Para fazer seus próximos pokemons, crie novos estados!
-
+  const [pokemon2, setPokemon2] = useState({
+    name: "Bulbasaur",
+    type: "Grass",
+    evolved: false,
+    weight: 6.9,
+    color: 'SpringGreen',
+    image: 'https://archives.bulbagarden.net/media/upload/thumb/2/21/001Bulbasaur.png/250px-001Bulbasaur.png',
+    id: 1
+  })
+  const [pokemon3, setPokemon3] = useState({
+    name: "Squirtle",
+    type: "Water",
+    evolved: false,
+    weight: 9,
+    color: 'SkyBlue',
+    image: 'https://archives.bulbagarden.net/media/upload/thumb/3/39/007Squirtle.png/250px-007Squirtle.png',
+    id: 7
+  })
+  const [pokemon4, setPokemon4] = useState({
+    name: 'Charmander',
+    type: 'Fire',
+    evolved: false,
+    weight: 8.5,
+    color: 'Salmon',
+    image: 'https://archives.bulbagarden.net/media/upload/thumb/7/73/004Charmander.png/250px-004Charmander.png',
+    id: 4
+  })
   return ( <>
   <GlobalStyles/>
     <FlexContainer>
-      {/* Aqui neste componente, passe as props. Lembre-se que também é possivel passar a função de setState via props! */}
-      <PokemonCard/>
-      {/* Crie aqui seus próximos pokemons! */}
-    </FlexContainer>
+    <PokemonCard 
+      pokemon={pokemon}
+      setPokemon={setPokemon}
+    />
+    <PokemonCard 
+      pokemon={pokemon2}
+      setPokemon2={setPokemon2}
+    />
+    <PokemonCard 
+      pokemon={pokemon3}
+      setPokemon3={setPokemon3}
+    />
+    <PokemonCard 
+      pokemon={pokemon4}
+      setPokemon4={setPokemon4}
+    />
+  </FlexContainer>
   </>
-    
   );
 }
-
 export default App;
